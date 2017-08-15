@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
-import logo from './static/images/logo.svg';
-import './static/style/App.css';
-import Button from 'antd-mobile/lib/button/index.web';
+import Button from 'antd-mobile/lib/button/index.web'; //antd-mobile引入方式
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        <Button>按钮</Button>
-      </p>
+        <header className="App-header">头部</header>
+        <section className="App-content">main部分</section>
+        <footer className="App-footer">尾部</footer>
       </div>
     );
   }

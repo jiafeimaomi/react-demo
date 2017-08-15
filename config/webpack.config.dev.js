@@ -194,7 +194,7 @@ module.exports = {
           },
           {
               test: /\.scss$/,
-              loader: 'style-loader!css-loader!postcss-loader!sass-loader'
+              loaders: ['style-loader', 'css-loader', 'sass-loader'],
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
