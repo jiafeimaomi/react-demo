@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './static/style/App.scss';
 import Button from 'antd-mobile/lib/button/index.web'; //antd-mobile引入方式
 
 class App extends Component {
