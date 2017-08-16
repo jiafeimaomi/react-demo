@@ -7,14 +7,29 @@ class Input extends React.Component{
     componentDidMount(){
       
     }
+
+    onInputChange(event){
+      const { inputChange} = this.props
+      inputChange(event.target.value);
+    }
+    addTodo(event){
+      event.preventDefault();
+      const { addItem} = this.props
+      // console.log('this.props.value', this.props.value);
+      addItem({
+        item:this.props.value,
+        done: false
+      })
+    }
+    
     render(){
       return (
         <form>
           <div
             className="form-group">
             <label htmlFor="listInput">Email address:</label>
-            <input ref="myInput" type="text" className="form-control" id="listItemInput" value={this.props.newToDo} placeholder="Add new todo" onChange = {this.props.onChange}/>
-            <button className="btn btn-primary" onClick={this.props.doAdd}>Add Item</button>
+            <input ref="myInput" type="text" className="form-control" id="listItemInput" value={this.props.value} placeholder="Add new todo" onChange = {this.onInputChange.bind(this)} />
+            <button className="btn btn-primary" onClick={this.addTodo.bind(this)} >Add Item</button>
           </div>
         </form>
       )
