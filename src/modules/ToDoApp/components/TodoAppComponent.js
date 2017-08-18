@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Lists from '../common/Lists';
-import Input from '../common/Input';
+import Lists from '../../common/Lists';
+import Input from '../../common/Input';
 
 class TodoLists extends React.Component{
     constructor(props){
